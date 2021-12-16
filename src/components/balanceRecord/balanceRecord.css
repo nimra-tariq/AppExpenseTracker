@@ -1,0 +1,14 @@
+* {
+    text-align: center;
+}
+
+.incExpContainer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.incExpContainer div {
+    padding: 10px 8px;
+}

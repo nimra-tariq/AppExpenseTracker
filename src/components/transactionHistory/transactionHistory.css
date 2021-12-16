@@ -1,0 +1,29 @@
+.form-group label {
+    position: relative;
+    padding: 10px;
+    background-color: cadetblue;
+    width: 90%;
+    text-align: left;
+    padding: 10px;
+    margin: 10px;
+}
+
+.form-group {
+    position: relative;
+}
+
+#formGroupExampleInput {
+    margin-left: 5%;
+    width: 90%;
+}
+
+.form-group input {
+    text-align: left;
+    font-size: 0.8em;
+    padding: 10px;
+}
+
+button {
+    margin: 15px;
+    padding: 10px;
+}

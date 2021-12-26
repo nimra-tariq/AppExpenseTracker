@@ -6,7 +6,7 @@ import './App.css';
 import Footer from './components/footer/footer';
 import { useReducer } from 'react';
 
-import { TransactionContext } from './components/context/transactionContext';
+import { TransactionContext } from './context/transactionContext';
 import { myReducer } from './reducer/reducer';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

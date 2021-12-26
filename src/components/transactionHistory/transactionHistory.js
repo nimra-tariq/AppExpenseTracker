@@ -1,6 +1,6 @@
 import './transactionHistory.css'
 import { useContext } from 'react'
-import { TransactionContext } from '../context/transactionContext'
+import { TransactionContext } from '../../context/transactionContext';
 import react,{useState} from 'react';
 import { toast } from 'react-toastify';
 export default function TransactionHistory(){
@@ -22,6 +22,15 @@ row.append(countCol,transTypeCol,amountCol);
 document.getElementById('tableBody').append(row);
 }
 
+let buttnons=document.querySelectorAll('.btn-info');
+function changeColor(event){
+ for (let i = 0; i < buttnons.length; i++) {
+ buttnons[i].classList.remove('applyColor')
+ }
+  let clickedBtn=event.target;
+  clickedBtn.classList.add('applyColor');
+}
+
 // function dispatchAmount(){
 //   transactionContext.dispatcher({type:'addIncome',value:document.getElementsByTagName("input")[1].value});
 // }
@@ -36,31 +45,32 @@ document.getElementById('tableBody').append(row);
 //   toast.error('please enter an amount')
 // }
     return<>
-    <div><h1>History</h1></div>
+    <div><h2 className="historyh2">History</h2></div>
     <table className="table table table-hover ">
   <thead className="thead-dark">
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">TransactionType</th>
-      <th scope="col">Amount</th>
+      <th scope="col"><h6>#</h6></th>
+      <th scope="col"><h6>TransactionType</h6></th>
+      <th scope="col"><h6>Amount</h6></th>
     </tr>
   </thead>
   <tbody id='tableBody'>
   </tbody>
 </table>
-<div><h2 >Add New Transaction</h2></div>
-<div>
+
+<div className="balanceContainer">
+<div><h2 className='h2Transaction'>Add New Transaction</h2></div>
 <form>
-  
+
         <div className="form-group">
           <label htmlFor="formGroupExampleInput">Add transaction description</label>
           <input type="text" className="form-control" id="formGroupExampleInput" placeholder="transaction type" />
           <label htmlFor="formGroupExampleInput">Add amount</label>
-          <input  type="number" className="form-control" id="formGroupExampleInput" placeholder="amount" name="test_name"  min="0" oninput="validity.valid||(value='');"></input>
-          <button type="button" class="btn btn-info" onClick={()=>
-            {if(document.getElementsByTagName("input")[1].value!==''){transactionContext.dispatcher({type:'addIncome',value:document.getElementsByTagName("input")[1].value});addRecordToTable()} else {toast.error('please enter an amount')}}}>Add Income</button>
-          <button type="button" class="btn btn-info" onClick={()=>
-          {if(document.getElementsByTagName("input")[1].value!==''){transactionContext.dispatcher({type:'addExpense',value:document.getElementsByTagName("input")[1].value});addRecordToTable()} else {toast.error('please enter an amount')}}}>Add Expense</button>
+          <input  type="number" className="form-control" id="formGroupExampleInput" placeholder="amount" name="test_name"  min="0" onInput="validity.valid||(value='');"></input>
+          <button type="button" className="btn btn-info" onClick={(event)=>
+          {if(document.getElementsByTagName("input")[1].value!==''){transactionContext.dispatcher({type:'addIncome',value:document.getElementsByTagName("input")[1].value});addRecordToTable();changeColor(event)} else {toast.error('please enter an amount');changeColor(event)}}}>Add Income</button>
+          <button type="button" className="btn btn-info" onClick={(event)=>
+          {if(document.getElementsByTagName("input")[1].value!==''){transactionContext.dispatcher({type:'addExpense',value:document.getElementsByTagName("input")[1].value});addRecordToTable();changeColor(event)} else {toast.error('please enter an amount');changeColor(event)}}}>Add Expense</button>
         </div>
       
       </form>

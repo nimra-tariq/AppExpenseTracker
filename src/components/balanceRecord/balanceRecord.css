@@ -12,3 +12,31 @@
 .incExpContainer div {
     padding: 10px 8px;
 }
+
+.h2balRec {
+    padding: 15px;
+}
+
+.balance {
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.recordContainer {
+    margin: 20px;
+    /* border: 2px solid; */
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px #9e84adc4
+}
+
+#inc {
+    color: #f022f3;
+}
+
+#exp {
+    color: #112ef9;
+}
+
+#bal {
+    color: #f70e0e;
+}

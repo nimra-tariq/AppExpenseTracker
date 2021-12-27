@@ -3,7 +3,6 @@ import { TransactionContext } from '../../context/transactionContext';
 import './balanceRecord.css'
 export default function BalanaceRecord() {
     const transactionContext=useContext(TransactionContext);
-    console.log(transactionContext);
     return <div className="recordContainer">
     <div >
         <div><h2 className='h2 h2balRec'>Your Balance</h2></div>

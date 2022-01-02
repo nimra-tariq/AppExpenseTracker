@@ -4,7 +4,7 @@ import './balanceRecord.css'
 export default function BalanaceRecord() {
     const transactionContext=useContext(TransactionContext);
     return <div className="recordContainer">
-    <div >
+    <div>
         <div><h2 className='h2 h2balRec'>Your Balance</h2></div>
         <div id="bal" className='balanceDiv balance'>{transactionContext.transaction.income+transactionContext.transaction.expense}$</div>
     </div>

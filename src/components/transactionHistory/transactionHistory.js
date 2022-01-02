@@ -66,7 +66,7 @@ function changeColor(event){
           <label htmlFor="formGroupExampleInput">Add transaction description</label>
           <input type="text" className="form-control" id="formGroupExampleInput" placeholder="transaction type" />
           <label htmlFor="formGroupExampleInput">Add amount</label>
-          <input  type="number" className="form-control" id="formGroupExampleInput" placeholder="amount" name="test_name"  min="0" onInput="validity.valid||(value='');"></input>
+          <input  type="number" className="form-control" id="formGroupExampleInput" placeholder="amount" name="test_name"  min="0" step="1"></input>
           <button type="button" className="btn btn-info" onClick={(event)=>
           {if(document.getElementsByTagName("input")[1].value!==''){transactionContext.dispatcher({type:'addIncome',value:document.getElementsByTagName("input")[1].value});addRecordToTable();changeColor(event)} else {toast.error('please enter an amount');changeColor(event)}}}>Add Income</button>
           <button type="button" className="btn btn-info" onClick={(event)=>

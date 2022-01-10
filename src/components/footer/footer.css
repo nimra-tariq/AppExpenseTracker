@@ -1,3 +1,14 @@
 div a {
     text-decoration: none;
+ 
+}
+body{
+         line-height: 1.2;
+}
+span{
+    font-size: 0.86em;
+    font-weight: bold;
+}
+.footer{
+    margin-top: 20px;
 }

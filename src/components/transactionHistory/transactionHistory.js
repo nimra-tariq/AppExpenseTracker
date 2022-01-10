@@ -31,19 +31,6 @@ function changeColor(event){
   clickedBtn.classList.add('applyColor');
 }
 
-// function dispatchAmount(){
-//   transactionContext.dispatcher({type:'addIncome',value:document.getElementsByTagName("input")[1].value});
-// }
-
-// function validateAmount(){
-//   if(document.getElementsByTagName("input")[1].value!=='')
-//   {
-//     dispatchAmount();
-//     addRecordToTable();
-//   }
-//   else
-//   toast.error('please enter an amount')
-// }
     return<>
     <div><h2 className="historyh2">History</h2></div>
     <table className="table table table-hover ">

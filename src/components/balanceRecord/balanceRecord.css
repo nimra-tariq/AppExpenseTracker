@@ -10,11 +10,14 @@
 }
 
 .incExpContainer div {
-    padding: 10px 8px;
+    padding: 1px 8px;
 }
 
 .h2balRec {
-    padding: 15px;
+    margin-bottom: 0px;
+    padding: 2px;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 .balance {
@@ -24,7 +27,6 @@
 
 .recordContainer {
     margin: 20px;
-    /* border: 2px solid; */
     border-radius: 30px;
     box-shadow: 10px 10px 10px #9e84adc4
 }
@@ -39,4 +41,11 @@
 
 #bal {
     color: #f70e0e;
+}
+h3{
+    font-size: 1.3em;
+}
+.h3Heading{
+    font-size: 1.1em;
+    margin-bottom: 0;
 }

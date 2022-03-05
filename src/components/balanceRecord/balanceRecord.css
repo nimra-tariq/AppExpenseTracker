@@ -27,8 +27,8 @@
 
 .recordContainer {
     margin: 20px;
-    border-radius: 30px;
-    box-shadow: 10px 10px 10px #9e84adc4
+    /* border-radius: 30px; */
+    /* box-shadow: 10px 10px 10px #9e84adc4 */
 }
 
 #inc {

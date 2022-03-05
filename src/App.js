@@ -1,14 +1,13 @@
 import Header from "./components/header/header";
 import BalanaceRecord from "./components/balanceRecord/balanaceRecord";
 import TransactionHistory from "./components/transactionHistory/transactionHistory";
-import "./App.css";
 import Footer from "./components/footer/footer";
 import { useReducer } from "react";
-
 import { TransactionContext } from "./context/transactionContext";
 import { myReducer } from "./reducer/reducer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./App.css";
 
 const initialState = {
   income: 0.00,
